@@ -15,7 +15,7 @@
         android:textStyle="bold"
         android:textSize="30sp"
         android:gravity="center"
-        android:background="#FF460A"/>
+        android:background="@drawable/bg_header"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="50dp"

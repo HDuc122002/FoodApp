@@ -1,5 +1,8 @@
 package com.example.foodapp;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +17,11 @@ import java.util.ArrayList;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder>{
 
+    Context context;
     ArrayList<Product> productArrayList;
 
-    public ProductAdapter(ArrayList<Product> productArrayList) {
+    public ProductAdapter(Context context, ArrayList<Product> productArrayList) {
+        this.context = context;
         this.productArrayList = productArrayList;
     }
 
@@ -33,6 +38,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
         holder.tv_food.setText(productArrayList.get(position).getFood_name());
         holder.tv_des.setText(productArrayList.get(position).getFood_des());
         holder.tv_price.setText(productArrayList.get(position).getFood_price());
+
+       holder.itemView.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(context,FoodDetailActivity.class);
+               context.startActivity(intent);
+           }
+       });
+
     }
 
     @Override

@@ -44,7 +44,7 @@ public class ProductFragment extends Fragment {
         productArrayList.add(new Product(R.drawable.food_img_1,"food 1","this is food 1","$4"));
         productArrayList.add(new Product(R.drawable.food_img_2,"food 2","this is food 2","$5"));
 
-        recyclerView.setAdapter(new ProductAdapter(productArrayList));
+        recyclerView.setAdapter(new ProductAdapter(getContext(),productArrayList));
         return view;
     }
 }
