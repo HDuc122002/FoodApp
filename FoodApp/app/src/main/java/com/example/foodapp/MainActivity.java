@@ -4,11 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ClipData;
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.foodapp.databinding.ActivityMainBinding;
 
@@ -30,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new CartFragment());
                     break;
                 case R.id.home:
-                    replaceFragment(new HomeFragment());
+                    replaceFragment(new ProfileFragment());
                     break;
             }
             return true;
