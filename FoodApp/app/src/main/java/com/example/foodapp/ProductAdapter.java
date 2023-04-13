@@ -3,6 +3,7 @@ package com.example.foodapp;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -33,7 +37,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.img_food.setImageResource(productArrayList.get(position).getFood_image());
         holder.tv_food.setText(productArrayList.get(position).getFood_name());
         holder.tv_des.setText(productArrayList.get(position).getFood_des());
@@ -42,7 +46,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
        holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(context,FoodDetailActivity.class);
+                Intent intent = new Intent(context,FoodDetailActivity.class);
                context.startActivity(intent);
            }
        });

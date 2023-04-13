@@ -20,9 +20,8 @@ import java.util.List;
 
 
 public class ProductFragment extends Fragment {
-
-   private RecyclerView recyclerView;
-   private ArrayList<Product> productArrayList;
+    RecyclerView recyclerView;
+    ArrayList<Product> productArrayList;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,6 +31,7 @@ public class ProductFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         productArrayList = new ArrayList<>();
+
         productArrayList.add(new Product(R.drawable.food_img_1,"food 1","this is food 1","$2"));
         productArrayList.add(new Product(R.drawable.food_img_2,"food 2","this is food 2","$3"));
         productArrayList.add(new Product(R.drawable.food_img_1,"food 1","this is food 1","$4"));
