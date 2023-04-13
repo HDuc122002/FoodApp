@@ -6,6 +6,7 @@
     tools:context=".CartFragment"
     android:orientation="vertical">
 
+
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
@@ -31,38 +32,7 @@
         android:padding="10dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Items Total:"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="$0"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:gravity="right"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Delivery Service:"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="$0"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:gravity="right"/>
-
-        <TextView
+            android:id="@+id/tv_food_total_cart_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
@@ -71,6 +41,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_food_total_cart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"

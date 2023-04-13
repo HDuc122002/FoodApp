@@ -38,6 +38,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        final Product temp = productArrayList.get(position);
         holder.img_food.setImageResource(productArrayList.get(position).getFood_image());
         holder.tv_food.setText(productArrayList.get(position).getFood_name());
         holder.tv_des.setText(productArrayList.get(position).getFood_des());
@@ -47,6 +48,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
            @Override
            public void onClick(View v) {
                 Intent intent = new Intent(context,FoodDetailActivity.class);
+                intent.putExtra("food_name",temp.getFood_name());
+                intent.putExtra("food_des",temp.getFood_des());
+                intent.putExtra("food_price",temp.getFood_price());
+                intent.putExtra("food_img",temp.getFood_image());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                context.startActivity(intent);
            }
        });
